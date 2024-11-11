@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;            // Target to follow (your player character)
-    public float smoothing = 5f;        // Smoothing speed
+    public float smoothing = 30f;        // Smoothing speed
     public Vector3 offset = new Vector3(0f, 0f, -10f);  // Offset from the target
     // Start is called before the first frame update
     void Start()
