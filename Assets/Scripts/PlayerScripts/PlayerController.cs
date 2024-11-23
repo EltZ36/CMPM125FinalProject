@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
 
     public InputAction MoveAction;
     public InputAction SummonAction;
-    [SerializeField] private GameObject Pet; 
-
+    [SerializeField] private GameObject Pet;
+    SpawnLogic spawner;
+    public GameObject spawnManager;
     // public int maxHealth = 10;
 
     // int currentHeath;
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
         SummonAction.Enable();
 
         rb2d = GetComponent<Rigidbody2D>();
-
+        spawner = spawnManager.GetComponent<SpawnLogic>();
 
     }
 
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
         move = MoveAction.ReadValue<Vector2>();
         if (SummonAction.triggered)
         {
-            Summon();
+            Summon(spawner.summonList1);
         }
     }
 
@@ -49,9 +50,21 @@ public class PlayerController : MonoBehaviour
         rb2d.MovePosition(position);
     }
 
-    void Summon()
+    void Summon(List<GameObject> list)
     {
         Debug.Log("Summoning");
-        Instantiate(Pet, transform.position + new Vector3(-2, 0, 0), Quaternion.identity);
+        GameObject newsummon = spawner.GetSummon(list);
+        if (newsummon != null)
+        {
+            newsummon.transform.position = transform.position + new Vector3(-2,0,0);
+            newsummon.transform.rotation = transform.rotation;
+            newsummon.SetActive(true);
+            // Still needs/assumes way for summon to die
+        }
+        else
+        {
+            Debug.Log("problem summoning");
+        }
+        //Instantiate(Pet, transform.position + new Vector3(-2, 0, 0), Quaternion.identity);
     }
 }
