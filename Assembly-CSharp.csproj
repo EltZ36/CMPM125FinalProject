@@ -86,7 +86,6 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
     <Compile Include="Assets/Scripts/PlayerController.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
-    <Compile Include="Assets/Scripts/PlayerScripts/PlayerController.cs" />
     <Compile Include="Assets/Scripts/MenuScript.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
@@ -118,7 +117,6 @@
     <Compile Include="Assets/UnityTechnologies/2DBeginnerAdventureGame/Scripts/Final/Enemy.cs" />
     <Compile Include="Assets/UnityTechnologies/2DBeginnerAdventureGame/Scripts/Final/UIHandler.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
-    <Compile Include="Assets/Scripts/PlayerScripts/CameraFollow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
