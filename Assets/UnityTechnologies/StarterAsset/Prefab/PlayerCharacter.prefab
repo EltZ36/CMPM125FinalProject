@@ -149,6 +149,7 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     m_Flags: 0
+  gameManager: {fileID: 0}
   LaunchAction:
     m_Name: Launch
     m_Type: 0
@@ -163,6 +164,15 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: a72206d0-11a0-4e32-b9f9-bb37feaebe11
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  respawnR:
+    m_Name: Respawn R
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: ede52f49-4e20-4b25-94b8-cbcfaf893ab4
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
