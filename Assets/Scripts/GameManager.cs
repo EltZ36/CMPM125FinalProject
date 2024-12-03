@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour
     // Time between spawns
     public float spawnRate = 2f;    
     private bool isSpawning = false;
+    public int totalEnemies;
+    private int enemiesFixed;
+    public AudioClip completionSound;
+    public AudioSource backgroundMusic;
+    public GameObject completionPanel;
 
     // Ensure that there's only one instance of the GameManager
     //awake: when this script is being loaded
@@ -33,6 +38,25 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    public void EnemyFixed()
+    {
+        enemiesFixed++;
+        if (enemiesFixed >= totalEnemies)
+        {
+            CompleteLevel();
+        }
+    }
+
+    void CompleteLevel()
+    {
+        if (backgroundMusic.isPlaying)
+        {
+            backgroundMusic.Stop();
+        }
+        AudioSource.PlayClipAtPoint(completionSound, Camera.main.transform.position);
+        // Optionally display a congratulations message to the player.
+        completionPanel.SetActive(true);
     }
 
 
