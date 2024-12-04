@@ -51,5 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "CMPM125FinalProject.sln"
+    "dotnet.defaultSolution": "CMPM125FinalProject.sln",
+    "dotnet.preferCSharpExtension": true
 }
