@@ -25,8 +25,8 @@ public class SummonController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         timer = changeTime;
         //randomly generate speed and time of direction change
-        speed = Random.Range(0.5f, 1.4f);
-        changeTime = Random.Range(2.0f, 5.0f);
+        speed = Random.Range(0.8f, 1.8f);
+        changeTime = Random.Range(5.0f, 8.0f);
     }
 
     // Update is called once per frame
@@ -38,6 +38,7 @@ public class SummonController : MonoBehaviour
         {
             direction = -direction;
             timer = changeTime;
+            this.gameObject.SetActive(false);
         }
 
     }
@@ -67,7 +68,9 @@ public class SummonController : MonoBehaviour
     {
         if(other.gameObject.tag == "enemy")
         {
+            Debug.Log("HIT");
             other.gameObject.GetComponent<EnemyController>().Fix(); 
+            other.gameObject.SetActive(false);
         }
     }
     public void Fix(){
@@ -77,3 +80,4 @@ public class SummonController : MonoBehaviour
         //animator.speed = 0;
     }
 }
+ 
