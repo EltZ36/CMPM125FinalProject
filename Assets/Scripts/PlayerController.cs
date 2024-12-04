@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     //Input bind to arrow keys in unity editor
     public InputAction MoveAction;
-    public GameManager gameManager;
+    public SummonManager SummonManager;
     public InputAction LaunchAction;
     public InputAction talkAction;
     public InputAction respawnR;
@@ -125,8 +125,8 @@ public class PlayerController : MonoBehaviour
 
     void RespawnPerformed(InputAction.CallbackContext context)
     {
-        Debug.Log("enemy generation started.");
+        Debug.Log("Summon generation started.");
 
-        gameManager.StartGeneratingEnemies();
+        SummonManager.Instance.StartGeneratingSummons();
     }
 }
