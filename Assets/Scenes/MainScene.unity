@@ -822,6 +822,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &144665485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144665486}
+  - component: {fileID: 144665487}
+  m_Layer: 0
+  m_Name: SummonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &144665486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144665485}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 207573501}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &144665487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144665485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e152977d141c641b4dd8993b8bdb7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  summonPrefab: {fileID: 2281388179814867002, guid: 1a2e0cce236c94f879eba06e37e83162,
+    type: 3}
+  Player: {fileID: 330364677}
+  spawnRate: 2
+  totalSummons: 0
+  summonSound: {fileID: 0}
 --- !u!1 &149125477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,6 +1275,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &207573500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 207573501}
+  m_Layer: 0
+  m_Name: Summons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &207573501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207573500}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.388349, y: -4.0951777, z: -0.07416761}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 144665486}
+  - {fileID: 241908474}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &221815608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,6 +1392,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &241908473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 241908474}
+  m_Layer: 0
+  m_Name: SummonPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &241908474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241908473}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 207573501}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &245728188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,7 +1592,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248677387}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e8cb00566f82df74e873a4f9a4c0d78e, type: 3}
@@ -4446,7 +4560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746249809}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6978,7 +7092,7 @@ GameObject:
   - component: {fileID: 996578147}
   - component: {fileID: 996578148}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: EnemyManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6992,7 +7106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996578146}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7013,7 +7127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8168857135285395558, guid: cce14105586ca9843adde71bdaa29df6,
     type: 3}
-  spawnRate: 2
   totalEnemies: 6
   completionSound: {fileID: 8300000, guid: d7db5a59e2c0e4d609e76159e690c67f, type: 3}
   backgroundMusic: {fileID: 248677388}
@@ -83653,7 +83766,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: [{fileID: 1345832892}]
+  m_Children:
+  - {fileID: 1345832892}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1302788049
@@ -84642,8 +84756,8 @@ Transform:
   - {fileID: 958417401}
   - {fileID: 158769980}
   - {fileID: 784843521}
-  - {fileID: 996578147}
   - {fileID: 746249810}
+  - {fileID: 996578147}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1491985581
@@ -88599,6 +88713,11 @@ PrefabInstance:
       objectReference: {fileID: 996578148}
     - target: {fileID: 8073082040722936628, guid: 17632341c0f494a07aedc71ce9792bcc,
         type: 3}
+      propertyPath: SummonManager
+      value: 
+      objectReference: {fileID: 144665487}
+    - target: {fileID: 8073082040722936628, guid: 17632341c0f494a07aedc71ce9792bcc,
+        type: 3}
       propertyPath: respawnR.m_Name
       value: Respawn R
       objectReference: {fileID: 0}
@@ -88816,6 +88935,7 @@ SceneRoots:
   - {fileID: 1302788048}
   - {fileID: 1489658792}
   - {fileID: 7359425926848111278}
+  - {fileID: 207573501}
   - {fileID: 248677389}
   - {fileID: 1505469179}
   - {fileID: 1296200711}
