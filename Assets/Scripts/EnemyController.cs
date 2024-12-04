@@ -77,5 +77,6 @@ public class EnemyController : MonoBehaviour
         //remove enemy object from rigidbody physics sim
         rb2d.simulated = false;
         animator.speed = 0;
+        GameManager.Instance.EnemyFixed();
     }
 }
