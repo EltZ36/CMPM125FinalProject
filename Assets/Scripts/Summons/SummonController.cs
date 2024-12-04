@@ -65,7 +65,10 @@ public class SummonController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        //this should instead be any enemy prefab with the enemy tag and reduce its health then. 
+        if(other.gameObject.tag == "enemy")
+        {
+            other.gameObject.GetComponent<EnemyController>().Fix(); 
+        }
     }
     public void Fix(){
         aggressive = false;
