@@ -117,7 +117,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.01212509, y: -0.26099026}
@@ -141,7 +141,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2281388179814867002}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -175,6 +175,8 @@ MonoBehaviour:
   speed: 0.1
   isVertical: 0
   changeTime: 0
+  SummonParticles: {fileID: 5930599018575032810, guid: f7ee519d6866fde4394e5f46405fca94,
+    type: 3}
   hitClip: {fileID: 0}
 --- !u!95 &4256480941628053774
 Animator:

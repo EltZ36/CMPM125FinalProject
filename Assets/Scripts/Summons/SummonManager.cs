@@ -11,7 +11,6 @@ public class SummonManager : MonoBehaviour
     // Singleton instance of GameManager
     //mark private only this class can modify this instance
     public static SummonManager Instance { get; private set; }
-
     //enemyPrefab movement script is modified to generate random speed
     //and change direction at a random time
     public GameObject summonPrefab;
@@ -80,7 +79,7 @@ public class SummonManager : MonoBehaviour
         if (newsummon != null)
         {            
             newsummon.transform.position = Player.position + (transform.right);
-            Debug.Log(newsummon.transform.position);
+            newsummon.GetComponent<SummonController>().SummonParticles.particleSys.Play();
             newsummon.SetActive(true);
         }
     }
