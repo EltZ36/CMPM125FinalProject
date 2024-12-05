@@ -9,7 +9,9 @@ public class PlayerController : MonoBehaviour
 
     //Input bind to arrow keys in unity editor
     public InputAction MoveAction;
+    public AudioSource backgroundMusic;
     public SummonManager SummonManager;
+   
     public InputAction LaunchAction;
     public InputAction talkAction;
     public InputAction respawnR;
@@ -29,10 +31,23 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
 
     AudioSource audioSource;
+
+    // Initialising variables for Game Over Menu 
+    // public float myHealth;
+    // public Slider healthBar; 
+    public GameObject gameOverMenu;
+    public AudioClip gameOverSound;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        /*
+        healthBar.maxValue = maxHealth;
+        healthBar.value = currentHealth;
+        */
+       
+
         MoveAction.Enable();
         LaunchAction.Enable();
         talkAction.Enable();
@@ -45,6 +60,7 @@ public class PlayerController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        gameOverMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -91,9 +107,16 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("Hit");
         }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        //check health
+        if(currentHealth == 0){
+            GameOver();
+        }
         Debug.Log("Player current Health: " + currentHealth + "/" + maxHealth);
         UIhandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
 
+        if(currentHealth == 0f){
+            GameOver();
+        }
     }
 
     void Launch(InputAction.CallbackContext context)
@@ -146,6 +169,17 @@ public class PlayerController : MonoBehaviour
     public void PlaySound(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
+    }
+
+    public void GameOver(){
+        Debug.Log("Game Over!");
+        if (backgroundMusic.isPlaying)
+        {
+            backgroundMusic.Stop();
+        }
+        PlaySound(gameOverSound);
+        gameOverMenu.SetActive(true);
+        
     }
 
     void RespawnPerformed(InputAction.CallbackContext context)
