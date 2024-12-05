@@ -1,31 +1,21 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-//uses a singleton pattern to ensure only one instance of 
-//game manager exists at any time
+//modified with the help of gpt to fix the summon issue. 
 public class SummonManager : MonoBehaviour
 {
-    // Singleton instance of GameManager
-    //mark private only this class can modify this instance
     public static SummonManager Instance { get; private set; }
-    //enemyPrefab movement script is modified to generate random speed
-    //and change direction at a random time
+
     public GameObject summonPrefab;
-    public Transform Player; 
-    // Time between spawns
-    public float spawnRate = 2f;    
-    private bool isSpawning = false;
-    public int totalSummons;
+    public Transform Player;
+    public int totalSummons = 1; // Maximum number of summons allowed
     public AudioClip summonSound;
-    public List<GameObject> summonList;
-    // Ensure that there's only one instance of the GameManager
-    //awake: when this script is being loaded
+    private GameObject currentSummon; // Keep track of the current active summon
+    private List<GameObject> summonList;
+
     private void Awake()
     {
-
         if (Instance == null)
         {
             Instance = this;
@@ -35,68 +25,66 @@ public class SummonManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void Start()
     {
         summonList = new List<GameObject>();
-        GameObject tmp;
         for (int i = 0; i < totalSummons; i++)
         {
-            Debug.Log("made summon" + i);
-            tmp = Instantiate(summonPrefab);
+            GameObject tmp = Instantiate(summonPrefab);
             tmp.SetActive(false);
             summonList.Add(tmp);
         }
     }
+
     public void StartGeneratingSummons()
     {
-        if (!isSpawning)
+        // Check if there is already an active summon
+        if (currentSummon != null && currentSummon.activeInHierarchy)
         {
-            isSpawning = true;
-            StartCoroutine(SpawnSummonsCoroutine());
+            Debug.Log("A summon is already active.");
+            return;
+        }
+
+        // Spawn a summon if none exists
+        SpawnSummon();
+    }
+
+    private void SpawnSummon()
+    {
+        // Get an inactive summon from the pool
+        GameObject newSummon = GetSummon(summonList);
+        if (newSummon != null)
+        {
+            currentSummon = newSummon;
+            newSummon.transform.position = Player.position + transform.right;
+            var summonController = newSummon.GetComponent<SummonController>();
+            newSummon.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("No available summons in the pool.");
         }
     }
 
-//the coroutine keeps track of the time 
-    IEnumerator SpawnSummonsCoroutine()
+    private GameObject GetSummon(List<GameObject> list)
     {
-        float endTime = Time.time + 2f;  
-        // Run for 6 seconds
-
-        while (Time.time < endTime)
+        foreach (var summon in list)
         {
-            SpawnSummon();
-            yield return new WaitForSeconds(spawnRate);  
-        }
-
-        isSpawning = false;
-    }
-
-    void SpawnSummon()
-    {
-        //Vector3 spawnPosition = new Vector3(Random.Range(0, 2f), 0, 0);
-        // Vector2 spawnPosition2 = new Vector2(Random.Range(-10f, 10f), Random.Range(-10f, 20f));
-        GameObject newsummon = GetSummon(summonList);
-        if (newsummon != null)
-        {            
-            newsummon.transform.position = Player.position + (transform.right);
-            newsummon.GetComponent<SummonController>().SummonParticles.particleSys.Play();
-            newsummon.SetActive(true);
-        }
-    }
-
-    public GameObject GetSummon(List<GameObject> list)
-    {
-        for (int i = 0; i < totalSummons; i++)
-        {
-            if (!list[i].activeInHierarchy)
+            if (!summon.activeInHierarchy)
             {
-                return list[i];
+                return summon;
             }
         }
         return null;
     }
+
+    public void DespawnSummon()
+    {
+        if (currentSummon != null)
+        {
+            currentSummon.SetActive(false);
+            currentSummon = null;
+        }
+    }
 }
-
-
-
-
