@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro.Examples;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -178,8 +179,13 @@ public class PlayerController : MonoBehaviour
             backgroundMusic.Stop();
         }
         PlaySound(gameOverSound);
-        gameOverMenu.SetActive(true);
-        
+        StartCoroutine(OneSecondCoroutine());
+    }
+
+    IEnumerator OneSecondCoroutine()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("GameOver");
     }
 
     void RespawnPerformed(InputAction.CallbackContext context)

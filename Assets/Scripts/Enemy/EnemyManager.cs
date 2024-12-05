@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 //uses a singleton pattern to ensure only one instance of 
@@ -56,7 +57,13 @@ public class EnemyManager : MonoBehaviour
         }
         AudioSource.PlayClipAtPoint(completionSound, Camera.main.transform.position);
         // Optionally display a congratulations message to the player.
-        completionPanel.SetActive(true);
+        StartCoroutine(OneSecondCoroutine());
+    }
+
+    IEnumerator OneSecondCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("GameOver");
     }
 }
 
