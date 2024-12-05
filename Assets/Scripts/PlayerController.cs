@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     //Input bind to arrow keys in unity editor
     public InputAction MoveAction;
     public SummonManager SummonManager;
-    public GameObject gameOverMenu;
+   
     public InputAction LaunchAction;
     public InputAction talkAction;
     public InputAction respawnR;
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         healthBar.maxValue = maxHealth;
         healthBar.value = currentHealth;
         */
-        gameOverMenu.SetActive(false);
+       
 
         MoveAction.Enable();
         LaunchAction.Enable();
@@ -106,12 +106,6 @@ public class PlayerController : MonoBehaviour
         if(currentHealth == 0f){
             GameOver();
         }
-    }
-
-    public void GameOver(){
-        Debug.Log("Game Over!");
-        gameOverMenu.SetActive(true);
-        Time.timeScale = 0f;
     }
 
     void Launch(InputAction.CallbackContext context)
