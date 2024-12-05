@@ -13,6 +13,7 @@ public class UIhandler : MonoBehaviour
     public float displayTime = 4.0f;
     private VisualElement m_NonPlayerDialogue;
     private VisualElement m_NonPlayerDialogueQuestComplete;
+    private VisualElement m_FoxChat; 
     private float m_TimerDisplay;
     private Button menuButton;
     // Start is called before the first frame update
@@ -28,6 +29,9 @@ public class UIhandler : MonoBehaviour
 
         m_NonPlayerDialogueQuestComplete = uiDocument.rootVisualElement.Q<VisualElement>("QuestCompleted");
         m_NonPlayerDialogueQuestComplete.style.display = DisplayStyle.None;
+
+        m_FoxChat = uiDocument.rootVisualElement.Q<VisualElement>("FoxChat");
+        m_FoxChat.style.display = DisplayStyle.None;
 
         m_TimerDisplay = -1.0f;
 
@@ -53,6 +57,7 @@ public class UIhandler : MonoBehaviour
             {
                 m_NonPlayerDialogue.style.display = DisplayStyle.None;
                 m_NonPlayerDialogueQuestComplete.style.display = DisplayStyle.None;
+                m_FoxChat.style.display = DisplayStyle.None;
             }
         }
     }
@@ -66,6 +71,7 @@ public class UIhandler : MonoBehaviour
     {
         m_NonPlayerDialogue.style.display = DisplayStyle.Flex;
         m_NonPlayerDialogueQuestComplete.style.display = DisplayStyle.None;
+        m_FoxChat.style.display = DisplayStyle.None;
         m_TimerDisplay = displayTime;
     }
 
@@ -73,8 +79,15 @@ public class UIhandler : MonoBehaviour
     {
         m_NonPlayerDialogue.style.display = DisplayStyle.None;
         m_NonPlayerDialogueQuestComplete.style.display = DisplayStyle.Flex;
-
+        m_FoxChat.style.display = DisplayStyle.None;
         m_TimerDisplay = displayTime;
+    }
+
+    public void DisplayFoxChat()
+    {
+        m_NonPlayerDialogue.style.display = DisplayStyle.None;
+        m_NonPlayerDialogueQuestComplete.style.display = DisplayStyle.None;
+        m_FoxChat.style.display = DisplayStyle.Flex;
     }
 
     void ReturnToMenu(){

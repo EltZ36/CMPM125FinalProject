@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
         //only check with NPC layer
         //ray length is 1.5f
         RaycastHit2D hit = Physics2D.Raycast(rb2D.position + Vector2.up * 0.2f, moveDirection, 1.5f, LayerMask.GetMask("NPC"));
-        if (hit.collider != null)
+        if (hit.collider != null && hit.collider.gameObject.tag != "foxnpc")
         {
             Debug.Log("Raycast has hit the object" + hit.collider.gameObject);
             //call npc script to display dialogue
@@ -134,6 +134,13 @@ public class PlayerController : MonoBehaviour
                 //CoinsAdd.instance.addCoins();
                 playercoins += 1;
             }
+        }
+        else if (hit.collider != null && hit.collider.gameObject.tag == "foxnpc")
+        {
+            //call npc script to display dialogue
+            NonPlayerCharScript npcScript = hit.collider.gameObject.GetComponent<NonPlayerCharScript>();
+            // Locate the two text boxes in the visual tree
+            UIhandler.instance.DisplayFoxChat();
         }
     }
     public void PlaySound(AudioClip clip)

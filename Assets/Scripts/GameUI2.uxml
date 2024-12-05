@@ -13,4 +13,7 @@
     <ui:Instance template="DialogNPC" name="QuestCompleted" style="height: 984px; position: absolute; top: 542px; width: 1859px; left: 419px; align-self: center; right: -1927px; bottom: -1075px;">
         <AttributeOverrides element-name="Label" text="Thanks, adventurer. You&apos;ll &#10;save this town for sure." />
     </ui:Instance>
+    <ui:Instance template="DialogNPC" name="FoxChat" style="height: 984px; position: absolute; top: 542px; width: 1859px; left: 419px; align-self: center; right: -1927px; bottom: -1075px;">
+        <AttributeOverrides element-name="Label" text="Hello, you sure look new. " />
+    </ui:Instance>
 </ui:UXML>
