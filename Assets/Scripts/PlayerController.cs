@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
 
     //Input bind to arrow keys in unity editor
     public InputAction MoveAction;
+    public AudioSource backgroundMusic;
     public SummonManager SummonManager;
-    public GameObject gameOverMenu;
+   
     public InputAction LaunchAction;
     public InputAction talkAction;
     public InputAction respawnR;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     // public float myHealth;
     // public Slider healthBar; 
     public GameObject gameOverMenu;
+    public AudioClip gameOverSound;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +40,7 @@ public class PlayerController : MonoBehaviour
         healthBar.maxValue = maxHealth;
         healthBar.value = currentHealth;
         */
-        gameOverMenu.SetActive(false);
+       
 
         MoveAction.Enable();
         LaunchAction.Enable();
@@ -108,12 +110,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void GameOver(){
-        Debug.Log("Game Over!");
-        gameOverMenu.SetActive(true);
-        Time.timeScale = 0f;
-    }
-
     void Launch(InputAction.CallbackContext context)
     {
         //instantiate projectile game object, identity means no rotation
@@ -152,6 +148,11 @@ public class PlayerController : MonoBehaviour
 
     public void GameOver(){
         Debug.Log("Game Over!");
+        if (backgroundMusic.isPlaying)
+        {
+            backgroundMusic.Stop();
+        }
+        PlaySound(gameOverSound);
         gameOverMenu.SetActive(true);
         
     }
