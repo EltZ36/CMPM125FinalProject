@@ -12,6 +12,7 @@ public class UIhandler : MonoBehaviour
     public static UIhandler instance { get; private set; }
     public float displayTime = 4.0f;
     private VisualElement m_NonPlayerDialogue;
+    private VisualElement m_NonPlayerDialogueQuestComplete;
     private float m_TimerDisplay;
     private Button menuButton;
     // Start is called before the first frame update
@@ -24,6 +25,10 @@ public class UIhandler : MonoBehaviour
 
         m_NonPlayerDialogue = uiDocument.rootVisualElement.Q<VisualElement>("DialogNPC");
         m_NonPlayerDialogue.style.display = DisplayStyle.None;
+
+        m_NonPlayerDialogueQuestComplete = uiDocument.rootVisualElement.Q<VisualElement>("QuestCompleted");
+        m_NonPlayerDialogueQuestComplete.style.display = DisplayStyle.None;
+
         m_TimerDisplay = -1.0f;
 
         menuButton = uiDocument.rootVisualElement.Q<Button>("Menu");
@@ -59,6 +64,15 @@ public class UIhandler : MonoBehaviour
     public void DisplayDialogue()
     {
         m_NonPlayerDialogue.style.display = DisplayStyle.Flex;
+        m_NonPlayerDialogueQuestComplete.style.display = DisplayStyle.None;
+        m_TimerDisplay = displayTime;
+    }
+
+    public void DisplayThanks()
+    {
+        m_NonPlayerDialogue.style.display = DisplayStyle.None;
+        m_NonPlayerDialogueQuestComplete.style.display = DisplayStyle.Flex;
+
         m_TimerDisplay = displayTime;
     }
 

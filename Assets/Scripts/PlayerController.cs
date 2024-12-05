@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.Examples;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,6 +15,10 @@ public class PlayerController : MonoBehaviour
     public InputAction respawnR;
     public int maxHealth = 5;
     int currentHealth;
+
+    public Quest currentQuest;
+    public QuestGiver QuestGiver;
+
     public int health { get { return currentHealth; } }
 
     Rigidbody2D rb2D;
@@ -65,7 +70,10 @@ public class PlayerController : MonoBehaviour
         // {
         //     StartGeneration();
         // }
-
+        if(currentQuest.completed)
+        {
+            QuestGiver.gameObject.SetActive(false);
+        }
     }
     void FixedUpdate()
     {
@@ -108,14 +116,20 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(rb2D.position + Vector2.up * 0.2f, moveDirection, 1.5f, LayerMask.GetMask("NPC"));
         if (hit.collider != null)
         {
-            // Debug.Log("Raycast has hit the object" + hit.collider.gameObject);
+            Debug.Log("Raycast has hit the object" + hit.collider.gameObject);
             //call npc script to display dialogue
             NonPlayerCharScript npcScript = hit.collider.gameObject.GetComponent<NonPlayerCharScript>();
-            if (npcScript != null)
-            {
+            // Locate the two text boxes in the visual tree
+            if (npcScript != null && currentQuest.completed == false)
+            { 
                 UIhandler.instance.DisplayDialogue();
+                QuestGiver.OpenQuestWindow();
+                QuestGiver.AcceptQuest();
             }
-
+            if (npcScript != null && currentQuest.completed == true)
+            {
+                UIhandler.instance.DisplayThanks();
+            }
         }
     }
     public void PlaySound(AudioClip clip)
@@ -126,5 +140,15 @@ public class PlayerController : MonoBehaviour
     void RespawnPerformed(InputAction.CallbackContext context)
     {
         SummonManager.Instance.StartGeneratingSummons();
+
+        if (currentQuest.isActive)
+        {
+            //increments the summon count
+            currentQuest.goal.Summon();
+            if (currentQuest.goal.IsReached())
+            {
+                currentQuest.Complete();
+            }
+        }
     }
 }
