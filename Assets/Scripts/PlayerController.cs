@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     //Input bind to arrow keys in unity editor
     public InputAction MoveAction;
+    public AudioSource backgroundMusic;
     public SummonManager SummonManager;
    
     public InputAction LaunchAction;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     // public float myHealth;
     // public Slider healthBar; 
     public GameObject gameOverMenu;
+    public AudioClip gameOverSound;
 
     // Start is called before the first frame update
     void Start()
@@ -146,6 +148,11 @@ public class PlayerController : MonoBehaviour
 
     public void GameOver(){
         Debug.Log("Game Over!");
+        if (backgroundMusic.isPlaying)
+        {
+            backgroundMusic.Stop();
+        }
+        PlaySound(gameOverSound);
         gameOverMenu.SetActive(true);
         
     }

@@ -1956,7 +1956,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248677387}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e8cb00566f82df74e873a4f9a4c0d78e, type: 3}
@@ -91594,6 +91594,16 @@ PrefabInstance:
       propertyPath: SummonManager
       value: 
       objectReference: {fileID: 144665487}
+    - target: {fileID: 8073082040722936628, guid: 17632341c0f494a07aedc71ce9792bcc,
+        type: 3}
+      propertyPath: gameOverSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c93a4c03dc3fd4851ac2b6a9c13de756, type: 3}
+    - target: {fileID: 8073082040722936628, guid: 17632341c0f494a07aedc71ce9792bcc,
+        type: 3}
+      propertyPath: backgroundMusic
+      value: 
+      objectReference: {fileID: 248677388}
     - target: {fileID: 8073082040722936628, guid: 17632341c0f494a07aedc71ce9792bcc,
         type: 3}
       propertyPath: respawnR.m_Name
