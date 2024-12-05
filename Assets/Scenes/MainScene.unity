@@ -1016,7 +1016,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f8c73d75cc5730a448d8634d7f19a719, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ae544ec4439fd4a47b817430b330ae80, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8137,6 +8137,7 @@ MonoBehaviour:
     type: 3}
   totalEnemies: 6
   completionSound: {fileID: 8300000, guid: d7db5a59e2c0e4d609e76159e690c67f, type: 3}
+  fixSound: {fileID: 8300000, guid: 4e356d8e36201c14da953082c4d569ab, type: 3}
   backgroundMusic: {fileID: 248677388}
   completionPanel: {fileID: 809795186}
 --- !u!1001 &997124867
