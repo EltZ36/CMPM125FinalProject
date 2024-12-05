@@ -3,34 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|c:\\users\\elton zeng\\cmpm125\\cmpm125finalproject\\assets\\scripts\\enemy\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|c:\\users\\elton zeng\\cmpm125\\cmpm125finalproject\\assets\\scripts\\summons\\summonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\summons\\summonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\assets\\scripts\\summons\\summonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\summons\\summonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\assets\\scripts\\enemy\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\assets\\scripts\\summons\\summoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\summons\\summoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\assets\\scripts\\enemy\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\assets\\scripts\\sinewaveparticles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sinewaveparticles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Owner\\OneDrive\\Documents\\Game Tech\\Week2 Physics World\\Assets\\My Scripts\\BulletManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Owner\\OneDrive\\Documents\\Game Tech\\Week2 Physics World\\Assets\\My Scripts\\Movement Logic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\assets\\scripts\\myprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23FAA7D0-00FC-A9BF-8701-1482E6DA43B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\myprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,56 +36,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MyProjectile.cs",
-              "DocumentMoniker": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\MyProjectile.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MyProjectile.cs",
-              "ToolTip": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\MyProjectile.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MyProjectile.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T08:08:45.082Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EnemyController.cs",
               "DocumentMoniker": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\Enemy\\EnemyController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyController.cs",
               "ToolTip": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\Enemy\\EnemyController.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAwwEYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T06:55:29.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T04:01:47.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SineWaveParticles.cs",
+              "DocumentMoniker": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\SineWaveParticles.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SineWaveParticles.cs",
+              "ToolTip": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\SineWaveParticles.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SineWaveParticles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T03:08:08.191Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EnemyManager.cs",
-              "DocumentMoniker": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\Enemy\\EnemyManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyManager.cs",
-              "ToolTip": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\Enemy\\EnemyManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyManager.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAYwBIAAAAaAAAAAAAAAA==",
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAmwH0AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T06:38:59.368Z"
+              "WhenOpened": "2024-12-04T04:45:12.863Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SummonManager.cs",
               "DocumentMoniker": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\Summons\\SummonManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Summons\\SummonManager.cs",
               "ToolTip": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\Summons\\SummonManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Summons\\SummonManager.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAQwEoAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAIwDsAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T06:38:17.048Z"
+              "WhenOpened": "2024-12-04T06:38:17.048Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -97,27 +93,15 @@
               "Title": "SummonController.cs",
               "DocumentMoniker": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\Summons\\SummonController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Summons\\SummonController.cs",
-              "ToolTip": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\Summons\\SummonController.cs*",
-              "RelativeToolTip": "Assets\\Scripts\\Summons\\SummonController.cs*",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAwB8AAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\Summons\\SummonController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Summons\\SummonController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T06:37:54.603Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\Elton Zeng\\CMPM125\\CMPM125FinalProject\\Assets\\Scripts\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAlwIAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T04:45:12.863Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "BulletManager.cs",
               "DocumentMoniker": "C:\\Users\\Owner\\OneDrive\\Documents\\Game Tech\\Week2 Physics World\\Assets\\My Scripts\\BulletManager.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Owner\\OneDrive\\Documents\\Game Tech\\Week2 Physics World\\Assets\\My Scripts\\BulletManager.cs",
@@ -129,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Movement Logic.cs",
               "DocumentMoniker": "C:\\Users\\Owner\\OneDrive\\Documents\\Game Tech\\Week2 Physics World\\Assets\\My Scripts\\Movement Logic.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Owner\\OneDrive\\Documents\\Game Tech\\Week2 Physics World\\Assets\\My Scripts\\Movement Logic.cs",

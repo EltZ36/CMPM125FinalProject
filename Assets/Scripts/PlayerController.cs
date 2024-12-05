@@ -125,8 +125,6 @@ public class PlayerController : MonoBehaviour
 
     void RespawnPerformed(InputAction.CallbackContext context)
     {
-        Debug.Log("Summon generation started.");
-
         SummonManager.Instance.StartGeneratingSummons();
     }
 }

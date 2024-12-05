@@ -10,6 +10,7 @@ public class SummonController : MonoBehaviour
     Rigidbody2D rb2d;
     public bool isVertical;
     public float changeTime;
+    public SineWaveParticles SummonParticles; 
     float timer;
     //forward 1 backward -1
     int direction = 1;
@@ -64,13 +65,13 @@ public class SummonController : MonoBehaviour
         rb2d.MovePosition(position);
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "enemy")
+        if(other.tag == "enemy")
         {
             Debug.Log("HIT");
             other.gameObject.GetComponent<EnemyController>().Fix(); 
-            other.gameObject.SetActive(false);
+            //other.gameObject.SetActive(false);
         }
     }
     public void Fix(){
