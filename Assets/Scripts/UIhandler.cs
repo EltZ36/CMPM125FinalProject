@@ -52,6 +52,7 @@ public class UIhandler : MonoBehaviour
             if (m_TimerDisplay < 0)
             {
                 m_NonPlayerDialogue.style.display = DisplayStyle.None;
+                m_NonPlayerDialogueQuestComplete.style.display = DisplayStyle.None;
             }
         }
     }

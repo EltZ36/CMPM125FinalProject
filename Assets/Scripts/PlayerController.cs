@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     public Quest currentQuest;
     public QuestGiver QuestGiver;
+    public int playercoins = 0;
 
     public int health { get { return currentHealth; } }
 
@@ -129,6 +130,9 @@ public class PlayerController : MonoBehaviour
             if (npcScript != null && currentQuest.completed == true)
             {
                 UIhandler.instance.DisplayThanks();
+                //add coins to the canvas; 
+                //CoinsAdd.instance.addCoins();
+                playercoins += 1;
             }
         }
     }
