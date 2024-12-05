@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     Animator animator;
+    public ParticleSystem stun;
     public float speed;
     Rigidbody2D rb2d;
     public bool isVertical;
@@ -78,5 +79,6 @@ public class EnemyController : MonoBehaviour
         rb2d.simulated = false;
         animator.speed = 0;
         EnemyManager.Instance.EnemyFixed();
+        stun.Play();
     }
 }
