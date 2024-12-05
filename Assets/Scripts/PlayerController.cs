@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     //Input bind to arrow keys in unity editor
     public InputAction MoveAction;
     public SummonManager SummonManager;
+    public GameObject gameOverMenu;
     public InputAction LaunchAction;
     public InputAction talkAction;
     public InputAction respawnR;
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        gameOverMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -82,6 +84,10 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("Hit");
         }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        //check health
+        if(currentHealth == 0){
+            GameOver();
+        }
         Debug.Log("Player current Health: " + currentHealth + "/" + maxHealth);
         UIhandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
 
@@ -121,6 +127,12 @@ public class PlayerController : MonoBehaviour
     public void PlaySound(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
+    }
+
+    public void GameOver(){
+        Debug.Log("Game Over!");
+        gameOverMenu.SetActive(true);
+        
     }
 
     void RespawnPerformed(InputAction.CallbackContext context)
