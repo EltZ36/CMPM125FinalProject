@@ -20,6 +20,7 @@ public class EnemyManager : MonoBehaviour
     public int totalEnemies;
     private int enemiesFixed;
     public AudioClip completionSound;
+    public AudioClip fixSound;
     public AudioSource backgroundMusic;
     public GameObject completionPanel;
 
@@ -40,6 +41,7 @@ public class EnemyManager : MonoBehaviour
     public void EnemyFixed()
     {
         enemiesFixed++;
+        AudioSource.PlayClipAtPoint(fixSound, Camera.main.transform.position);
         if (enemiesFixed >= totalEnemies)
         {
             CompleteLevel();
