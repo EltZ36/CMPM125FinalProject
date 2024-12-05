@@ -9,7 +9,7 @@ public class SummonManager : MonoBehaviour
 
     public GameObject summonPrefab;
     public Transform Player;
-    public int totalSummons = 1; // Maximum number of summons allowed
+    public int totalSummons = 5; // Maximum number of summons allowed
     public AudioSource summonSound;
     private GameObject currentSummon; // Keep track of the current active summon
     private List<GameObject> summonList;
