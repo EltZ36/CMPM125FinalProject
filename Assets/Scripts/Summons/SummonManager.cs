@@ -10,7 +10,7 @@ public class SummonManager : MonoBehaviour
     public GameObject summonPrefab;
     public Transform Player;
     public int totalSummons = 1; // Maximum number of summons allowed
-    public AudioClip summonSound;
+    public AudioSource summonSound;
     private GameObject currentSummon; // Keep track of the current active summon
     private List<GameObject> summonList;
 
@@ -59,6 +59,7 @@ public class SummonManager : MonoBehaviour
             currentSummon = newSummon;
             newSummon.transform.position = Player.position + transform.right;
             var summonController = newSummon.GetComponent<SummonController>();
+            summonSound.Play();
             newSummon.SetActive(true);
         }
         else
