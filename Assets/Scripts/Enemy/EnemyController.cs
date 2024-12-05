@@ -79,6 +79,14 @@ public class EnemyController : MonoBehaviour
         rb2d.simulated = false;
         animator.speed = 0;
         EnemyManager.Instance.EnemyFixed();
-        stun.Play();
+        //from gpt asking: now how would I make it so that when an enemy gets stunned, the particles show on top of their head if the enemy and stun are both prefabs? I don't want to attach the particle system to the enemy.
+        Vector3 spawnPosition = transform.position + Vector3.up * 1.5f; // Adjust height as needed
+        if(stun != null)
+        {
+            Quaternion rotation = Quaternion.Euler(0, 90, 90);
+            stun = Instantiate(stun, spawnPosition, rotation);
+            stun.transform.SetParent(transform);
+            stun.Play();
+        }
     }
 }
