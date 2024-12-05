@@ -23,10 +23,22 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
 
     AudioSource audioSource;
+
+    // Initialising variables for Game Over Menu 
+    // public float myHealth;
+    // public Slider healthBar; 
+    public GameObject gameOverMenu;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        /*
+        healthBar.maxValue = maxHealth;
+        healthBar.value = currentHealth;
+        */
+        gameOverMenu.SetActive(false);
+
         MoveAction.Enable();
         LaunchAction.Enable();
         talkAction.Enable();
@@ -85,6 +97,15 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Player current Health: " + currentHealth + "/" + maxHealth);
         UIhandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
 
+        if(currentHealth == 0f){
+            GameOver();
+        }
+    }
+
+    public void GameOver(){
+        Debug.Log("Game Over!");
+        gameOverMenu.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     void Launch(InputAction.CallbackContext context)
